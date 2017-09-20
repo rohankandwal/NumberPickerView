@@ -7,6 +7,10 @@ some android projects use the android.widget.NumberPicker to provide alternative
 
 ###ScreenShot
 ====
+
+Loading fonts directly fron the xml.
+![Example Image][7]<br>
+
 ![Example Image][4]<br>
 picking an item dynamically
 
@@ -92,7 +96,8 @@ or
         app:npv_ShowCount="5"
         app:npv_TextSizeNormal="16sp"
         app:npv_TextSizeSelected="20sp"
-        app:npv_WrapSelectorWheel="true"/>
+        app:npv_WrapSelectorWheel="true"
+        app:npv_Font="MetalMacabre.ttf"/>
 
 ```
 3.control NumberPickerView in Java code
@@ -191,6 +196,7 @@ and you'd better not use this method in `onCreate(Bundle savedInstanceState)`, i
         <attr name="npv_AlternativeTextArrayWithoutMeasureHint" format="reference" />//represents the maxWidth of displayedValues item, exclude hint text.
         <!--the max length of hint content-->
         <attr name="npv_AlternativeHint" format="reference|string" />//represents the maxWidth of hint text
+        <attr name="npv_Font" format="reference|string" /> //Add font directly from xml
     </declare-styleable>
 
 ```
@@ -272,3 +278,4 @@ email: yeah0126@yeah.net
 [3]: https://github.com/Carbs0126/Screenshot/blob/master/gregorian_refine.gif
 [4]: https://github.com/Carbs0126/Screenshot/blob/master/numberpickerview_refine1.gif
 [5]: https://github.com/Carbs0126/Screenshot/blob/master/numberpickerview_refine2.gif
+[7]: https://github.com/rohankandwal/NumberPickerView/blob/master/screenshot/custom_font.png
