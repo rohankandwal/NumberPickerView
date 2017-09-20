@@ -1,8 +1,12 @@
 # NumberPickerView
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-NumberPickerView-green.svg?style=true)](https://android-arsenal.com/details/1/3817)
-#####Another NumberPicker with more flexible attributes on Android platform 
+#####Allowing custom font loading straight from xml 
 
 [English] [6]
+
+从xml加载自定义字体 
+![Example Image][7]<br>
+
 
 ##前言
 在Android项目的开发中会用到`NumberPicker`组件，但是默认风格的`NumberPicker`具有一些不灵活的属性，定制起来也比较麻烦，并且缺少一些过渡动效，因此在应用开发时，一般采用自定义的控件来完成选择功能。
@@ -100,7 +104,8 @@ https://github.com/Carbs0126/GregorianLunarCalendar
         app:npv_RespondChangeOnDetached="false"
         app:npv_TextSizeNormal="16sp"
         app:npv_TextSizeSelected="20sp"
-        app:npv_WrapSelectorWheel="true"/>
+        app:npv_WrapSelectorWheel="true"
+        app:npv_Font="MetalMacabre.ttf" />
 
 ```
 3.Java代码中使用：
@@ -195,6 +200,7 @@ https://github.com/Carbs0126/GregorianLunarCalendar
         <attr name="npv_AlternativeTextArrayWithoutMeasureHint" format="reference" />//可能达到的最大宽度，不包括说明文字在内，最大宽度只可能比此String的宽度+说明文字+说明文字marginstart +说明文字marginend 更大
         <!--the max length of hint content-->
         <attr name="npv_AlternativeHint" format="reference|string" />//说明文字的最大宽度
+        <attr name="npv_Font" format="reference|string" /> // 从xml加载自定义字体 
     </declare-styleable>
 
 ```
@@ -283,3 +289,4 @@ email: yeah0126@yeah.net
 [4]: https://github.com/Carbs0126/Screenshot/blob/master/numberpickerview_refine1.gif
 [5]: https://github.com/Carbs0126/Screenshot/blob/master/numberpickerview_refine2.gif
 [6]: https://github.com/Carbs0126/NumberPickerView/blob/master/README_English.md
+[7]: https://github.com/rohankandwal/NumberPickerView/blob/master/screenshot/custom_font.png
