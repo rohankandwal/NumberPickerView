@@ -17,7 +17,8 @@
         app:npv_ShowCount="5"
         app:npv_TextSizeNormal="16sp"
         app:npv_TextSizeSelected="20sp"
-        app:npv_WrapSelectorWheel="true"/>
+        app:npv_WrapSelectorWheel="true"
+        app:npv_Font="MetalMacabre.ttf"/>
 
     <ScrollView
         android:layout_width="match_parent"

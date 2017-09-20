@@ -131,6 +131,8 @@ public class NumberPickerView extends View{
     private String mTextEllipsize;
     private String mEmptyItemHint;
     private String mAlterHint;
+    // String used to load font name
+    private String mFontName;
     //friction used by scroller when fling
     private float mFriction = 1f;
     private float mTextSizeNormalCenterYOffset = 0f;
@@ -287,6 +289,8 @@ public class NumberPickerView extends View{
                 mRespondChangeInMainThread = a.getBoolean(attr, DEFAULT_RESPOND_CHANGE_IN_MAIN_THREAD);
             }else if (attr == R.styleable.NumberPickerView_npv_TextEllipsize) {
                 mTextEllipsize = a.getString(attr);
+            } else if (attr == R.styleable.NumberPickerView_npv_Font) {
+                mFontName = a.getString(attr);
             }
         }
         a.recycle();
@@ -310,6 +314,10 @@ public class NumberPickerView extends View{
         mPaintText.setColor(mTextColorNormal);
         mPaintText.setAntiAlias(true);
         mPaintText.setTextAlign(Align.CENTER);
+
+        if (mFontName != null) {
+            mPaintText.setTypeface(Typeface.createFromAsset(context.getAssets(), mFontName));
+        }
 
         mPaintHint.setColor(mTextColorHint);
         mPaintHint.setAntiAlias(true);
